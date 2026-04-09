@@ -1,0 +1,137 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+  "products":[
+  {
+    "id": 1,
+    "name": "Milk",
+    "category": "Dairy",
+    "price": 1.50,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Local Farm",
+    "quantity": "1L",
+    "imageUrl": "https://static.photos/600x400/101"
+  },
+  {
+    "id": 2,
+    "name": "Bread",
+    "category": "Bakery",
+    "price": 1.20,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Daily Bake",
+    "quantity": "500g",
+    "imageUrl": "https://static.photos/600x400/102"
+  },
+  {
+    "id": 3,
+    "name": "Eggs",
+    "category": "Dairy",
+    "price": 2.80,
+    "currency": "USD",
+    "inStock": false,
+    "brand": "Golden Hen",
+    "quantity": "12 pcs",
+    "imageUrl": "https://static.photos/600x400/103"
+  },
+  {
+    "id": 4,
+    "name": "Apples",
+    "category": "Fruits",
+    "price": 3.00,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Fresh Orchard",
+    "quantity": "1kg",
+    "imageUrl": "https://static.photos/600x400/104"
+  },
+  {
+    "id": 5,
+    "name": "Rice",
+    "category": "Grains",
+    "price": 10.00,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Premium Grain",
+    "quantity": "5kg",
+    "imageUrl": "https://static.photos/600x400/105"
+  },
+  {
+    "id": 6,
+    "name": "Chicken Breast",
+    "category": "Meat",
+    "price": 6.50,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Farm Fresh",
+    "quantity": "1kg",
+    "imageUrl": "https://static.photos/600x400/106"
+  },
+  {
+    "id": 7,
+    "name": "Orange Juice",
+    "category": "Beverages",
+    "price": 2.50,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Sun Valley",
+    "quantity": "1L",
+    "imageUrl": "https://static.photos/600x400/107"
+  },
+  {
+    "id": 8,
+    "name": "Tomato Sauce",
+    "category": "Canned Goods",
+    "price": 1.80,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Italian Choice",
+    "quantity": "400g",
+    "imageUrl": "https://static.photos/600x400/108"
+  },
+  {
+    "id": 9,
+    "name": "Spaghetti",
+    "category": "Pasta",
+    "price": 2.20,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Pasta House",
+    "quantity": "500g",
+    "imageUrl": "https://static.photos/600x400/109"
+  },
+  {
+    "id": 10,
+    "name": "Butter",
+    "category": "Dairy",
+    "price": 2.75,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Creamy Fields",
+    "quantity": "250g",
+    "imageUrl": "https://static.photos/600x400/110"
+  },
+  {
+    "id": 11,
+    "name": "Bananas",
+    "category": "Fruits",
+    "price": 1.90,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Tropical Fresh",
+    "quantity": "1kg",
+    "imageUrl": "https://static.photos/600x400/111"
+  },
+  {
+    "id": 12,
+    "name": "Coffee",
+    "category": "Beverages",
+    "price": 8.50,
+    "currency": "USD",
+    "inStock": true,
+    "brand": "Morning Roast",
+    "quantity": "250g",
+    "imageUrl": "https://static.photos/600x400/112"
+  }
+]
+}

@@ -1,0 +1,6 @@
+@import url("bootstrap.css");
+
+.row {
+  display: flex;
+  justify-content: center;
+}
