@@ -5,9 +5,24 @@
  * 3. Communicating with the server
  */
 
-fetch("http://localhost:3001/products")
+document.addEventListener("DOMContentLoaded", function(){
+  const frm = document.querySelector("#frm-product")
+  handleSubmit(frm)
+  getProducts()
+
+})
+
+function getProducts(){
+  fetch("http://localhost:3001/products", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  }
+})
   .then((response) => response.json())
   .then((data) => displayProducts(data));
+}
 
 function displayProducts(data) {
   const container = document.querySelector("#products");
@@ -20,9 +35,39 @@ function displayProducts(data) {
                     <h5 class="card-title">${product.name}</h5>
                     <p class="card-text">${product.category}</p>
                     <p class="card-text">${product.brand}</p>
-                    <a href="#" class="btn btn-sm btn-primary">Buy</a>
+                    <a href="#" class="btn btn-sm btn-danger">Delete Product</a>
                 </div>
             </div>
         `;
   });
 }
+
+function handleSubmit(frm){
+  frm.addEventListener("submit", (event)=> {
+    event.preventDefault();
+
+    const product = {
+      name: event.target.name.value,
+      price: event.target.price.value,
+      quantity: event.target.qty.value,
+      imageUrl: event.target.imageUrl.value,
+      category: event.target.category.value,
+      brand: event.target.brand.value
+    }
+    createProduct(product)
+
+  })
+}
+
+function createProduct(product){
+fetch("http://localhost:3001/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(product)
+    })
+}
+
+

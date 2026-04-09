@@ -4,3 +4,13 @@
   display: flex;
   justify-content: center;
 }
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+/* .content>form{
+  width: 200px;
+} */
+

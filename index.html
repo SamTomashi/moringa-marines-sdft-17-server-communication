@@ -8,7 +8,30 @@
   </head>
   <body>
     <div class="container">
-      <div class="row" id="products"></div>
+      <div class="content">
+        <div>
+          <label>Add Product</label>
+        <form class="border sticky m-4" id="frm-product">
+          <input class="m-1" type="text" name="name" placeholder="Product name"/>
+          <input class=" m-1" type="number" name="price" placeholder="Price"/>
+          <input class=" m-1" type="number" name="qty" placeholder="QTY"/>
+          <select name="category" title="category">
+            <option value="food">Food</option>
+            <option value="electonics">Electonics</option>
+            <option value="books">Books</option>
+          </select>
+          <select name="brand" title="brand">
+            <option value="samsung">Samsung</option>
+            <option value="Apple">Apple</option>
+          </select>
+          <input class=" m-1" type="url" name="imageUrl" placeholder="Image URL"/><br>
+          <button class="btn btn-sm btn-success" type="submit">Add</button>
+        </form>
+        <label>Create Product</label>
+        </div>
+        <div class="row" id="products"></div>
+
+      </div>
     </div>
 
     <script src="/js/index.js"></script>
