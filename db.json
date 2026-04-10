@@ -161,6 +161,15 @@
       "category": "electonics",
       "brand": "samsung",
       "id": "V1NFXdQZzk8"
+    },
+    {
+      "name": "Tomato",
+      "price": "37",
+      "quantity": "30",
+      "imageUrl": "https://images.pexels.com/photos/12904838/pexels-photo-12904838.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "category": "food",
+      "brand": "samsung",
+      "id": "LkbfFeaY03s"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

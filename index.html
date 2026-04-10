@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <div class="content">
         <div>
           <label>Add Product</label>
-        <form class="border sticky m-4" id="frm-product">
+        <form class="border sticky m-4" id="frm-product" >
           <input class="m-1" type="text" name="name" placeholder="Product name"/>
           <input class=" m-1" type="number" name="price" placeholder="Price"/>
           <input class=" m-1" type="number" name="qty" placeholder="QTY"/>
@@ -27,7 +27,15 @@
           <input class=" m-1" type="url" name="imageUrl" placeholder="Image URL"/><br>
           <button class="btn btn-sm btn-success" type="submit">Add</button>
         </form>
-        <label>Create Product</label>
+        <label>Update Product</label>
+        <form id="frm-update-product">
+
+          <select id="productSelectBox" name="products" title="products"></select>
+          <input class="m-1" type="text" name="name" placeholder="Product name"/>
+          <input class=" m-1" type="number" name="price" placeholder="Price"/>
+          <input class=" m-1" type="url" name="imageUrl" placeholder="Image URL"/><br>
+          <button type="submit">Update Product</button>
+        </form>
         </div>
         <div class="row" id="products"></div>
 
