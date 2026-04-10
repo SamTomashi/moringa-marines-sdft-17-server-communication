@@ -1,34 +1,23 @@
-// const { createElement } = require("react")
 
 document.addEventListener("DOMContentLoaded", async function(){
   const frm = document.querySelector("#frm-product")
   handleSubmit(frm)
   const products = await getProducts()
 
-
   displayProducts(products)
   populateProducts(products)
 
-
   handleProductChange()
 
-  updateProduct()
-
+  handleSubmitUpdatedProduct()
 
 })
 
 function populateProductForm(product){
   const frmUpdate = document.querySelector("#frm-update-product")
-  // const formData = new FormData(frmUpdate)
-  // formData.set("name", product.name)
-  // formData.set("price", product.price)
-  // formData.set("imageUrl", product.imageUrl)
-
   frmUpdate.name.value = product.name
    frmUpdate.price.value = product.price
     frmUpdate.imageUrl.value = product.imageUrl
-
-
 }
 
 
@@ -120,23 +109,30 @@ fetch("http://localhost:3003/products", {
     })
 }
 
-function updateProduct(){
+function handleSubmitUpdatedProduct(){
   const frm = document.querySelector("#frm-update-product")
   frm.addEventListener("submit", function(event){
-    const id = event.target.products
-    fetch(`http://localhost:3003/products/${id}`, {
+    event.preventDefault()
+    const id = event.target.products.value //
+    updateProduct(id)
+    
+  })
+}
+
+
+function updateProduct(id){
+  fetch(`http://localhost:3003/products/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
       },
-      body: {
-        name: event.target.name,
-        price: event.target.price,
-        imageUrl: event.target.imageUrl
-      }
+      body: JSON.stringify({
+        name: event.target.name.value,
+        price: event.target.price.value,
+        imageUrl: event.target.imageUrl.value
+      })
     })
-  })
-}
 
+}
 
